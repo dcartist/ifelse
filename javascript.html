@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>if else</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>Welcome to if else</h1> 
+					<p>Javascript Style</p>
+					<p class="smallText">use the <span>left</span> and <span>right</span> arrow keys to navigate</p>
+					<p class="smallerText">by Paula Bannerman <a href="https://www.dcartist.com" target="_blank" rel="noreferrer noopener">dcartist.com</a></p>
+				</section>
+				<section data-transition="fade-in slide-out"><p class="r-fit-text">One thing to remember</p>
+					<p class="fragment fade-up">It's not that bad</p>
+					<p class="fragment fade-up">It just seems bad</p></section>
+				<section>
+					
+					<p>You actually do conditionals (if/else) in your life every day.</p>
+					<p>"If Else" statements are like giving choices (based on specific information) to someone who hasn't been exposed to any of it before. The only difference is you giving the choices to a computer, not a human. So they will not understand what you "mean" to say. You have to be literal.</p>
+				</section>
+				<section data-auto-animate>
+					<p>Let's just say you have a light switch set <br>to off</p>
+					<img src="/images/lightoff.png" width="200"/>
+					<pre data-id="code-animation"><code data-noescape data-trim data-line-numbers>
+						let light = "off"
+						
+						
+  
+							
+						  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<p>You tell someone to turn the light on it if the light is off it <br> would look like this:</p>
+					<img src="/images/lighton.png" width="200"/>
+					<pre data-id="code-animation"><code data-noescape data-trim data-line-numbers >
+						let light = "off"
+						if (light == "off"){
+							light = "on"}
+  
+							
+						  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<p>Now you can tell them if it's off turn it on <br> or if it's on turn it off:</p>
+					<img src="/images/lightoff.png" width="200"/>
+					<pre data-id="code-animation"><code data-noescape data-trim data-line-numbers="1, 4-5">
+						let light = "on"
+						if (light == "off"){
+							light = "on"}
+						else{
+							light = "off"}
+						  </code></pre>
+				</section>
+				<section class="fade-in">
+					<p>Let's look at the some of the Basic logic conditions</p>
+					<img src="./javascriptcomparisonoperatorsimage041.jpg"/>
+				</section>
+				<section>
+					
+					<h2 data-id="code-title">Basic Structure</h2>
+					<p>Keep in mind ways to check conditions</p>
+					<p>If Else statements are like giving choices (based on certain information) to someone who hasn't been exposed to any of it before. It's just it's a computer not a human.</p>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Basic Structure</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						if ("this condition is true"){
+							"do something"}
+						else if ("this other condition is true"){
+							"do something else "}
+						else{
+							"do this since nothing above is true"}
+					</code></pre>
+					
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Basic Structure</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
+						if ("this condition is true"){
+							"do something"}
+						else if ("this other condition is true"){
+							"do something else "}
+						else{
+							"do this since nothing above is true"}
+					</code></pre>
+					<p> you start with an if and a condition you want to check</p>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Basic Structure</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
+						if ("this condition is true"){
+							"do something"}
+						else if ("this other condition is true"){
+							"do something else "}
+						else{
+							"do this since nothing above is true"}
+					</code></pre>
+					<p> if it's true then do something</p>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Basic Structure</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="3-4">
+						if ("this condition is true"){
+							"do something"}
+						else if ("this other condition is true"){
+							"do something else "}
+						else{
+							"do this since nothing above is true"}
+					</code></pre>
+					<p> else if something else is true do something else</p>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Basic Structure</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="5-6">
+						if ("this condition is true"){
+							"do something"}
+						else if ("this other condition is true"){
+							"do something else "}
+						else{
+							"do this since nothing above is true"}
+					</code></pre>
+					<p>When nothing in the conditional came out to be true you can use else as a catch all.</p>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">nested if</h2>
+					<p>When you need an if else inside another if statement, then you will where that condition is needed. Like adding a container inside another container.</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="4-11">
+						if ("this condition is true") {
+							do something}
+						else if ("this other condition is true")
+						{
+							if ("this condition is true"){
+								do something}
+							else if ("this other condition is true"){
+								"do something else "}
+							else{
+								"do this since nothing above is true"}
+							}
+						else{
+							"do this since nothing above is true"}
+					</code></pre>
+				</section>
+				<section data-background-image="/images/coffee.jpg" data-background-opacity=.5>
+					<h1> Here is another example</h1>
+				</section>
+				<section data-auto-animate>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1-2">
+						let broke = false
+						let outside_temp = 75
+						if (broke == true){
+							console.log("FREE office coffee")}
+						else if (outside_temp <= 60){
+							console.log("Hot Coffee from Starbucks")}
+						else{
+							console.log("Starbucks Ice Coffee")	}	
+					</code></pre>
+					<p>First we find something to compare, which in this case is being broke and the weather</p>
+				</section>
+				<section data-auto-animate>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="3-4">
+						let broke = false
+						let outside_temp = 75
+						if (broke == true){
+							console.log("FREE office coffee")}
+						else if (outside_temp <= 60){
+							console.log("Hot Coffee from Starbucks")}
+						else{
+							console.log("Starbucks Ice Coffee")	}
+					</code></pre>
+					<p>If you are broke, then you are drinking FREE office coffee</p>
+				</section>
+				<section data-auto-animate>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="5-6">
+						let broke = false
+						let outside_temp = 75
+						if (broke == true){
+							console.log("FREE office coffee")}
+						else if (outside_temp <= 60){
+							console.log("Hot Coffee from Starbucks")}
+						else{
+							console.log("Starbucks Ice Coffee")	}
+					</code></pre>
+					<p>else if (elif) it's cold outside then you're drinking Hot Coffee from Starbucks</p>
+				
+
+				</section>
+				<section data-auto-animate>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="7-8">
+						let broke = false
+						let outside_temp = 75
+						if (broke == true){
+							console.log("FREE office coffee")}
+						else if (outside_temp <= 60){
+							console.log("Hot Coffee from Starbucks")}
+						else{
+							console.log("Starbucks Ice Coffee")	}
+					</code></pre>
+					<p>else then you're drinking Ice Coffee from Starbucks</p>
+				</section>
+				<section data-auto-animate>
+					<h1>Things to remember:</h1>
+					<p class="fragment fade-up">Think logically</p>
+					<p class="fragment fade-up">Think in simple terms</p>
+				</section>
+				<section data-auto-animate>
+					<h1>Things to remember:</h1>
+					<p class="fade-up">If something is true then do this...</p>
+					<p class="fragment fade-up">Else If something other than the first statement is true then do this...</p>
+					<p class="fragment fade-up">Else just do this and call it a day...</p>
+				</section>
+				<section data-auto-animate>
+					<h1>Things to remember:</h1>
+					<p>Indentation isn't important</p>
+					<p class="fragment fade-up">but your what you put inbetween {} is important</p>
+					<p class="fragment fade-up">just remember you can do tons with if/else</p>
+					<p class="fragment fade-up">keep practicing using them</p>
+				</section>
+				<section>
+					<h1>The End</h1>
+					<button class="style_choice"><a href="index.html">Back to Main</a></button>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				loop: true,
+				touch: true,
+
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
